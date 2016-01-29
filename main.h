@@ -38,7 +38,8 @@ void loadbar(long x, long n){
 void countdown(double time, bool sec, bool bar){
 	for(unsigned int i = 0; i < time; i++){
         std::cout << " ";
-		if (sec) std::cout << blue << "  " << (time-i) << " Sec left";
+		if (sec && (time-i) > 3) std::cout << blue << "  " << (time-i) << " Sec left";
+        if (sec && (time-i) <= 3) std::cout << red << "  " << (time-i) << " Sec left";
 		if (bar) loadbar(i,time-1);
         std::cout << "\r" << std::flush;
 		sleep(1);
