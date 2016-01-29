@@ -27,7 +27,8 @@ int main(int argc, char **argv){
 	} else {
 		//convert time to into and send to countdown function
 		unsigned int time = atoi(time_word);
-		countdown(time);
+
+		countdown(time,true,true);
 
 		//prints a new line and makes sure the color is set back to default in terminal
 		std::cout << def << std::endl;
